@@ -14,4 +14,7 @@ void MyObject::onButtonClicked(int state)
     else if (state == 1) {
 
     }
+    else if (state == 2){
+
+    }
 }

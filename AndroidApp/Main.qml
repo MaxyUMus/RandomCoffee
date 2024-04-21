@@ -98,6 +98,8 @@ ApplicationWindow  {
 
                     onClicked: {
                         myObject.onButtonClicked(0);
+                        reg_window.visible = false;
+                        main_app.visible = true;
                     }
 
                     onPressed: {
@@ -139,7 +141,7 @@ ApplicationWindow  {
 
     Window {
         id: auth_window
-        visible: false
+        visible: true
         Rectangle {
             color: "#F9F9F9"
             anchors.fill: parent
@@ -194,6 +196,8 @@ ApplicationWindow  {
 
                     onClicked: {
                         myObject.onButtonClicked(1);
+                        auth_window.visible = false;
+                        main_app.visible = true;
                     }
 
                     onPressed: {
@@ -235,13 +239,13 @@ ApplicationWindow  {
 
     Window {
         id: main_app
-        visible: true
+        visible: false
 
         Rectangle {
             id: chat_list
             color: "#3b3e49"
             anchors { top: header_.bottom; bottom: footer_.top; left: parent.left; right: parent.right }
-            visible: false;
+            visible: true;
             ListModel {
                 id: chatModel
                 ListElement { name: "Кирилл"; surname: "Трубецкой"; avatar: "users_default.png" }
@@ -250,6 +254,7 @@ ApplicationWindow  {
             }
 
             ListView {
+                id: chats_
                 anchors.fill: parent
                 model: chatModel
                 spacing: 10
@@ -292,6 +297,16 @@ ApplicationWindow  {
                             anchors.left: avatar_.right
                             anchors.leftMargin: 10
                         }
+
+                        MouseArea {
+                            anchors.fill: parent
+                            onClicked: {
+                                chat_list.visible = false
+                                chat_.visible = true
+                                footer_.visible = false;
+                                msg_send.visible = true;
+                            }
+                        }
                     }
                 }
             }
@@ -301,7 +316,7 @@ ApplicationWindow  {
             id: chat_
             color: "#3b3e49"
             anchors { top: header_.bottom; bottom: footer_.top; left: parent.left; right: parent.right }
-            visible: true;
+            visible: false;
             ListModel {
                 id: messageModel
                 ListElement { name: "Кирилл"; message: "Дарова!" }
@@ -405,14 +420,23 @@ ApplicationWindow  {
             anchors.bottom: parent.bottom
             height: 50 // Height of the static footer
             width: parent.width
-            visible: false
+            visible: true
             Rectangle {
                 color: "#ffcc23"
                 anchors { fill: parent; margins: 0 }
 
-                Text {
-                    text: "This is a static footer"
-                    anchors.centerIn: parent
+                Rectangle {
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    anchors.verticalCenter: parent.verticalCenter
+                    width: 50
+                    height: 50
+                    id: chats_btn
+                    color: "transparent"
+                    Image {
+                        width: 50
+                        height: 50
+                        source: "user_u.png"
+                    }
                 }
             }
         }
@@ -422,7 +446,7 @@ ApplicationWindow  {
             anchors.bottom: parent.bottom
             height: 50 // Height of the static footer
             width: parent.width
-            visible: true
+            visible: false
 
             Rectangle {
                 color: "#ffcc23"

@@ -3,6 +3,7 @@
 #define MYOBJECT_H
 
 #include <QObject>
+#include <QVector>
 
 class MyObject : public QObject
 {

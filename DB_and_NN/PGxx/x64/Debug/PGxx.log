@@ -1,0 +1,27 @@
+﻿  PGxx.cpp
+C:\Users\lolke\source\repos\PGxx\PGxx\Neiro.cpp(15,23): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "PGxx.cpp")
+  
+C:\Users\lolke\source\repos\PGxx\PGxx\Neiro.cpp(49,23): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "PGxx.cpp")
+  
+C:\Users\lolke\source\repos\PGxx\PGxx\Neiro.cpp(51,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "PGxx.cpp")
+  
+C:\Users\lolke\source\repos\PGxx\PGxx\Neiro.cpp(64,20): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "PGxx.cpp")
+  
+C:\Users\lolke\source\repos\PGxx\PGxx\Neiro.cpp(76,20): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "PGxx.cpp")
+  
+C:\Users\lolke\source\repos\PGxx\PGxx\Neiro.cpp(89,32): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "PGxx.cpp")
+  
+C:\Users\lolke\source\repos\PGxx\PGxx\Neiro.cpp(103,23): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "PGxx.cpp")
+  
+C:\Users\lolke\source\repos\PGxx\PGxx\Neiro.cpp(105,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  (компиляция исходного файла "PGxx.cpp")
+  
+C:\Users\lolke\source\repos\PGxx\PGxx\PGxx.cpp(45,18): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  PGxx.vcxproj -> C:\Users\lolke\source\repos\PGxx\x64\Debug\PGxx.exe
